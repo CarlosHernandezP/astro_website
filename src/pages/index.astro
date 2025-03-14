@@ -1,11 +1,96 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import "../scripts/scroll.js";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carlos Hernandez | AI Consultant</title>
+  </head>
+  <body>
+	<Navbar />
+    <main>
+      <section id="hero">
+        <div class="hero-content">
+          <img src="/me.jpg" alt="Carlos Hernandez" class="profile-pic" />
+          <h1>Carlos Hernandez</h1>
+          <p>AI Consultant | Researcher | Musician</p>
+          <p>Scroll down to explore.</p>
+        </div>
+      </section>
+
+      <section id="ai-consultancy" class="consultancy-section">
+		<h2>AI Consultancy</h2>
+
+		<div class="company">
+			<img src="/servizurich.jpg" alt="ServiZurich" class="company-logo" />
+			<div class="company-text">
+			<h3>ServiZurich</h3>
+			<p>I helped them understand how they could better use and store their data for AI usage and helped them build different solutions to the problems they had in different departments.</p>
+			</div>
+		</div>
+
+		<div class="company">
+			<img src="/athena_tech.png" alt="Athena Tech" class="company-logo" />
+			<div class="company-text">
+			<h3>Athena Tech</h3>
+			<p>I worked with them as a consultant/researcher to build models of precision medicine for cutaneous melanoma patients using ML tools.</p>
+			</div>
+		</div>
+
+		<div class="company">
+			<img src="/kenko.jpg" alt="Kenko" class="company-logo" />
+			<div class="company-text">
+			<h3>Kenko</h3>
+			<p>I worked closely with this company on a project in conjunction with AMLO Technologies to build an automated pipeline for the detection of biomarker expression on histopathological images to test new staining strategies.</p>
+			</div>
+		</div>
+		</section>
+
+
+      <section id="ai-art">
+		<h2>AI in Art</h2>
+		<p>
+			Artificial intelligence is reshaping the creative landscape, offering new tools for artists and opening doors to unexplored artistic possibilities. My goal is to bridge the gap between artists and technical solutions, making AI an accessible and valuable creative partner.
+		</p>
+	
+		<h3>Style Transfer</h3>
+		<p>
+			Style transfer allows an image to adopt the artistic characteristics of another. By leveraging neural networks, we can take a regular photo and make it look like a painting.  
+			You can check out my implementation of neural style transfer on <a href="https://github.com/CarlosHernandezP/NeuralTransfer" target="_blank">GitHub</a>.
+		</p>
+	
+		<div class="style-transfer-images">
+			<div class="image-container">
+				<img src="https://raw.githubusercontent.com/CarlosHernandezP/NeuralTransfer/master/summer.jpg" alt="Original Image">
+				<p>Original Image</p>
+			</div>
+			<div class="image-container">
+				<img src="https://raw.githubusercontent.com/CarlosHernandezP/NeuralTransfer/master/style_transfered.jpg" alt="Style Transferred Image">
+				<p>Style Transferred Image</p>
+			</div>
+		</div>
+	
+		<h3>Diffusion Models</h3>
+		<p>
+			Diffusion models represent another breakthrough in AI-generated art, allowing for highly detailed and complex image generation. I'll be adding more details on this soon.
+		</p>
+      </section>
+
+      <section id="scientific-output">
+        <h2>Scientific Output</h2>
+        <p>My research contributions and publications.</p>
+      </section>
+
+      <section id="music">
+        <h2>Music</h2>
+        <p>My passion for music and composition.</p>
+      </section>
+    </main>
+  </body>
+</html>

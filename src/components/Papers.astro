@@ -1,0 +1,28 @@
+---
+export const papers = [
+  {
+    title: "BCN20000: Dermoscopic Lesions in the Wild",
+    url: "https://www.nature.com/articles/s41597-024-03387-w",
+    abstract: "Advancements in dermatological AI research need high-quality datasets reflecting real-world clinical scenarios. We introduce the BCN20000 dataset, comprising 18,946 dermoscopic images (2010–2016) from Hospital Clínic in Barcelona, Spain. This dataset bridges the gap between AI training data and clinical practice. We also provide baseline classifiers using state-of-the-art neural networks for further research.",
+  },
+];
+---
+
+<section id="scientific-output">
+  <h2>Scientific Output</h2>
+  <h3>Journal Papers</h3>
+  
+  <div class="papers-container">
+    {papers.map((paper, index) => (
+      <div class="paper-card" id={`paper-${index}`} on:click={() => togglePaper(index)}>
+        <h4 class="paper-title">{paper.title}</h4>
+        <div class="paper-details">
+          <p>{paper.abstract}</p>
+          <a href={paper.url} target="_blank">Read Full Paper</a>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<script src="/scripts/papers.js" defer></script>

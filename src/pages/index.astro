@@ -1,7 +1,8 @@
 ---
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
-import "../scripts/scroll.js";
+import "../../public/scripts/scroll.js";
+import Papers from "../components/Papers.astro";
 ---
 
 
@@ -24,7 +25,10 @@ import "../scripts/scroll.js";
         </div>
       </section>
 
-      <section id="ai-consultancy" class="consultancy-section">
+
+	  <Papers />
+
+      <section id="ai-consultancy" class="ai-consultancy hidden">
 		<h2>AI Consultancy</h2>
 
 		<div class="company">
@@ -82,15 +86,12 @@ import "../scripts/scroll.js";
 		</p>
       </section>
 
-      <section id="scientific-output">
-        <h2>Scientific Output</h2>
-        <p>My research contributions and publications.</p>
-      </section>
-
+    
       <section id="music">
         <h2>Music</h2>
         <p>My passion for music and composition.</p>
       </section>
     </main>
+	<script src="/scripts/scroll.js" defer></script>
   </body>
 </html>

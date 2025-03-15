@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import "../../public/scripts/scroll.js";
 import Papers from "../components/Papers.astro";
+import AiArt from '../components/Ai_art.astro';
 ---
 
 
@@ -25,7 +26,7 @@ import Papers from "../components/Papers.astro";
         </div>
       </section>
 
-
+	    <AiArt />
 	    <Papers />
 
       <section id="ai-consultancy" class="ai-consultancy hidden">
@@ -56,35 +57,6 @@ import Papers from "../components/Papers.astro";
 		</div>
 		</section>
 
-
-      <section id="ai-art">
-		<h2>AI in Art</h2>
-		<p>
-			Artificial intelligence is reshaping the creative landscape, offering new tools for artists and opening doors to unexplored artistic possibilities. My goal is to bridge the gap between artists and technical solutions, making AI an accessible and valuable creative partner.
-		</p>
-	
-		<h3>Style Transfer</h3>
-		<p>
-			Style transfer allows an image to adopt the artistic characteristics of another. By leveraging neural networks, we can take a regular photo and make it look like a painting.  
-			You can check out my implementation of neural style transfer on <a href="https://github.com/CarlosHernandezP/NeuralTransfer" target="_blank">GitHub</a>.
-		</p>
-	
-		<div class="style-transfer-images">
-			<div class="image-container">
-				<img src="https://raw.githubusercontent.com/CarlosHernandezP/NeuralTransfer/master/summer.jpg" alt="Original Image">
-				<p>Original Image</p>
-			</div>
-			<div class="image-container">
-				<img src="https://raw.githubusercontent.com/CarlosHernandezP/NeuralTransfer/master/style_transfered.jpg" alt="Style Transferred Image">
-				<p>Style Transferred Image</p>
-			</div>
-		</div>
-	
-		<h3>Diffusion Models</h3>
-		<p>
-			Diffusion models represent another breakthrough in AI-generated art, allowing for highly detailed and complex image generation. I'll be adding more details on this soon.
-		</p>
-      </section>
 
     
       <section id="music">

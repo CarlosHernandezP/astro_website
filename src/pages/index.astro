@@ -19,14 +19,14 @@ import Papers from "../components/Papers.astro";
       <section id="hero">
         <div class="hero-content">
           <img src="/me.jpg" alt="Carlos Hernandez" class="profile-pic" />
-          <h1>Carlos Hernandez</h1>
+          <h1>Dr. Carlos Hernandez</h1>
           <p>AI Consultant | Researcher | Musician</p>
           <p>Scroll down to explore.</p>
         </div>
       </section>
 
 
-	  <Papers />
+	    <Papers />
 
       <section id="ai-consultancy" class="ai-consultancy hidden">
 		<h2>AI Consultancy</h2>
@@ -91,7 +91,24 @@ import Papers from "../components/Papers.astro";
         <h2>Music</h2>
         <p>My passion for music and composition.</p>
       </section>
+
+
+	  <section class="contact-section">
+		<h2>Take A Coffee & Chat With Me</h2>
+		<div class="email-box">crherperez95@gmail.com</div>
+		<form action="mailto:crherperez95@gmail.com" method="post" enctype="text/plain">
+		  <input type="text" name="name" placeholder="Your Name" required>
+		  <input type="email" name="email" placeholder="Your Email" required>
+		  <textarea name="message" placeholder="Your Message" required></textarea>
+		  <button type="submit">Send Message</button>
+		</form>
+	  </section>
+
+
     </main>
 	<script src="/scripts/scroll.js" defer></script>
-  </body>
+
+
+
+</body>
 </html>

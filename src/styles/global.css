@@ -236,3 +236,51 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+
+
+/* Contact section */
+
+.contact-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.email-box {
+  background-color: #f4f4f4;
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #f4f4f4;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #2e32a6;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

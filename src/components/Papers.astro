@@ -1,26 +1,71 @@
 ---
-export const papers = [
+export const journalPapers = [
   {
     title: "BCN20000: Dermoscopic Lesions in the Wild",
     url: "https://www.nature.com/articles/s41597-024-03387-w",
     abstract: "Advancements in dermatological AI research need high-quality datasets reflecting real-world clinical scenarios. We introduce the BCN20000 dataset, comprising 18,946 dermoscopic images (2010–2016) from Hospital Clínic in Barcelona, Spain. This dataset bridges the gap between AI training data and clinical practice. We also provide baseline classifiers using state-of-the-art neural networks for further research.",
   },
+  {
+    title: "SurvLIMEpy: A Python package implementing SurvLIME",
+    url: "https://www.sciencedirect.com/science/article/abs/pii/S095741742302122X",
+    abstract: "SurvLIMEpy is an open-source Python package implementing SurvLIME, a method for computing local feature importance in survival analysis models. It speeds up execution using matrix-wise formulation and supports models like Cox PH, DeepHit, and DeepSurv. The package includes visualization tools to aid interpretation.",
+  },
 ];
+
+export const conferencePapers = [
+  {
+    title: "Bridging Domains in Melanoma Diagnostics: Predicting BRAF Mutations and Sentinel Lymph Node Positivity",
+    url: "https://openaccess.thecvf.com/content/CVPR2024W/DEF-AI-MIA/html/Hernandez-Perez_Bridging_Domains_in_Melanoma_Diagnostics_Predicting_BRAF_Mutations_and_Sentinel_CVPRW_2024_paper.html",
+    abstract: "This study adapts transformer-based models for predicting BRAF mutations and sentinel lymph node positivity in melanoma. We fine-tune DINOv2 models, leveraging domain adaptation to address limited pathology data. Results show success in BRAF mutation detection, while SLN prediction remains challenging due to its indirect histopathological correlation.",
+  },
+  {
+    title: "Contrastive and Attention-Based Multiple Instance Learning for Sentinel Lymph Node Status Prediction",
+    url: "https://link.springer.com/chapter/10.1007/978-3-031-17979-2_6",
+    abstract: "We develop a deep learning approach to predict lymph node metastasis from Whole Slide Images of primary melanoma tumours. Our method combines self-supervised contrastive learning for feature extraction with an attention-based MIL model, improving classification performance and interpretability by highlighting tumour tissue over artifacts.",
+  },
+  {
+    title: "Interpreting Machine Learning Models for Survival Analysis: A Study of Cutaneous Melanoma",
+    url: "https://link.springer.com/chapter/10.1007/978-3-031-54303-6_6",
+    abstract: "We compare machine learning models for survival analysis in melanoma using the SEER database. Random Survival Forest, DeepSurv, and DeepHit outperform Cox models. Using SurvLIMEpy, we analyze feature importance, highlighting the value of explainability in AI-driven prognosis.",
+  },
+  {
+    title: "Breast Cancer Molecular Subtyping from H&E Whole Slide Images Using Foundation Models and Transformers",
+    url: "https://link.springer.com/chapter/10.1007/978-3-031-77789-9_16",
+    abstract: "We classify breast cancer molecular subtypes from H&E Whole Slide Images using an Attention-Challenging MIL framework. Our ACTrans model integrates a transformer aggregator, achieving strong performance in an in-house dataset, particularly with foundation features at lower resolutions and larger patch sizes.",
+  },
+];
+
 ---
+
+
 
 <section id="scientific-output">
   <h2>Scientific Output</h2>
-  <h3>Journal Papers</h3>
   
-  <div class="papers-container">
-    {papers.map((paper, index) => (
-      <div class="paper-card" id={`paper-${index}`} on:click={() => togglePaper(index)}>
-        <h4 class="paper-title">{paper.title}</h4>
-        <div class="paper-details">
-          <p>{paper.abstract}</p>
-          <a href={paper.url} target="_blank">Read Full Paper</a>
+  <h3>Journal Papers</h3>
+    <div class="papers-container">
+      {journalPapers.map((paper, index) => (
+        <div class="paper-card" id={`journal-paper-${index}`} data-type="journal">
+          <h4 class="paper-title">{paper.title}</h4>
+          <div class="paper-details">
+            <p>{paper.abstract}</p>
+            <a href={paper.url} target="_blank">Read Full Paper</a>
+          </div>
         </div>
-      </div>
+      ))}
+    </div>
+
+
+    <h3>Conference Papers</h3>
+    <div class="papers-container">
+      {conferencePapers.map((paper, index) => (
+        <div class="paper-card" id={`conference-paper-${index}`} data-type="conference">
+          <h4 class="paper-title">{paper.title}</h4>
+          <div class="paper-details">
+            <p>{paper.abstract}</p>
+            <a href={paper.url} target="_blank">Read Full Paper</a>
+          </div>
+        </div>
     ))}
   </div>
 </section>
